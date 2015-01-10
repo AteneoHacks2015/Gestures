@@ -2,7 +2,12 @@ class Api::ItemsController < Api::ApplicationController
   before_filter :require_user, except: [:show, :index]
 
   def index
-    @items = Item.all
+    difficulty = params[:difficulty] || 1
+    count = params[:count] || 3
+
+    @items = Item.random_items(difficulty, count)
+
+    render json: @items, status: :ok
   end
 
   def create
