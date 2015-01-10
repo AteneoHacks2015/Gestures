@@ -11,7 +11,8 @@ Router.map(function() {
   });
 
   this.route("translate");
-  this.route("add");
+  this.route("add", {path:'user/item/new'});
+  this.resource("user", function() {});
 });
 
 export default Router;
