@@ -1,0 +1,40 @@
+body{
+  background-color: #f6f6f6;
+  padding-top: 50px;
+}
+
+#phrase{
+  text-align: center;
+  padding: 3% 5% 5% 5%;
+  font-size: 6vw;
+}
+
+#submit-answer{
+  padding: 2%;
+  badding-top: 0%;
+  text-align: center;
+}
+
+.answer{
+  text-align: center;
+  font-size: 10vw;
+  letter-spacing: 3vw;
+}
+
+.translated{
+  text-align: center;
+  font-size: 2.5vw;
+}
+
+h1{
+  font-size: 3vw;
+}
+h2{
+  font-size: 2vw;
+}
+
+.choice{
+  display: inline-block;
+  max-width: 200px;
+  max-height: auto;
+}
