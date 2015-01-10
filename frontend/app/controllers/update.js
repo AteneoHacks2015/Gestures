@@ -24,21 +24,21 @@ export default Ember.Controller.extend({
 
 			console.log(phrase);
 
-			// if(!Ember.isEmpty(phrase) && !Ember.isEmpty(difficulty)){
-			// 	$.post(
-			// 		'/api/items/',
-			// 		{"item": {"phrase":phrase, "difficulty":difficulty}},
-			// 		function(data){
-			// 			$.post(
-			// 			'/api/items/'+data.id+'/translations',
-			// 			{"translation": {"gestures": signs}},
-			// 			function(data){
-			// 				// console.log(data);
-			// 				$('#add').append('<br><br><div id="creation-success" class="alert alert-success">'+'<a href="#" class="close" data-dismiss="alert">&times;</a>'+'<strong>Success!</strong> You have successfully added an alternative translation.'+'</div>');
-			// 			});
-			// 		}
-			// 	);
-			// }
+			if(!Ember.isEmpty(phrase) && !Ember.isEmpty(difficulty)){
+				$.post(
+					'/api/items/',
+					{"item": {"phrase":phrase, "difficulty":difficulty}},
+					function(data){
+						$.post(
+						'/api/items/'+data.id+'/translations',
+						{"translation": {"gestures": signs}},
+						function(data){
+							// console.log(data);
+							$('#add').append('<br><br><div id="creation-success" class="alert alert-success">'+'<a href="#" class="close" data-dismiss="alert">&times;</a>'+'<strong>Success!</strong> You have successfully added an alternative translation.'+'</div>');
+						});
+					}
+				);
+			}
 		}
 	}
 });

@@ -12,7 +12,7 @@ export default Ember.Route.extend({
         var img = [];
         sample.translations.forEach(function(trans){
           trans.gestures.forEach(function(gesture) {
-            if(gesture.id <=26){
+            if(gesture.name.length == 1){
               var src = '/assets/gestures/sign-letters-circles/'+gesture.name+'.png';
             }
             else{
