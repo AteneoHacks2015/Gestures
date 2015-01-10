@@ -11,21 +11,12 @@
 
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="nav navbar-nav navbar-right">
-<<<<<<< HEAD
-        {{!-- {{#if isAuthenticated}} --}}
-          {{!-- <li><a href="" target="_blank" {{action "destroySession"}}>Logout</a></li> --}}
-          {{!-- <li><a href="" target="_blank">Roles</a></li> --}}
-        {{!-- {{else}} --}}
-          <li><a href="" target="_blank" id="sign-up" data-toggle="modal" data-target="#signUp">Sign Up</a></li>
-          <li><a href="" target="_blank" id="login" data-toggle="modal" data-target="#login">Login</a></li>
-        {{!-- {{/if}} --}}
-=======
         {{#if isAuthenticated}}
           <li class="dropdown">
             <a href="" class="dropdown-toggle" data-toggle="dropdown">Hi User!<span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><a href="/user">Home</a></li>
-              <li><a href="" class="disabled">Learn</a></li>
+              <li><a href="/learn">Learn</a></li>
               <li><a href="/user/item/new">Add Translation</a></li>
               <li><a href="" {{action "destroySession"}}>Logout</a></li>
             </ul>
@@ -34,7 +25,6 @@
           <li><a href="" target="_blank" data-toggle="modal" data-target="#signUp">Sign Up</a></li>
           <li><a href="" target="_blank" data-toggle="modal" data-target="#login">Login</a></li>
         {{/if}}
->>>>>>> 6b3de8acfd32a35f7b9d4368183b8b3d1092be27
       </ul>
     </div>
   </div>
@@ -57,7 +47,6 @@
         <form>
           <div class="form-group">
             <label for="name" class="control-label">Name</label>
-<<<<<<< HEAD
             {{input type="text" class="form-control" id="name" value=name}}
           </div>
           <div class="form-group">
@@ -71,21 +60,6 @@
           <div class="form-group">
             <label for="newpassword" class="control-label">Password</label>
             {{input type="password" class="form-control" id="newpassword" value=newpassword action='signUp'}}
-=======
-            <input type="text" class="form-control" id="name" value=name>
-          </div>
-          <div class="form-group">
-            <label for="age" class="control-label">Age</label>
-            <input type="number" class="form-control" id="age" value=age>
-          </div>
-          <div class="form-group">
-            <label for="newusername" class="control-label">Username</label>
-            <input type="text" class="form-control" id="newusername" value=newusername>
-          </div>
-          <div class="form-group">
-            <label for="newpassword" class="control-label">Password</label>
-            <input type="password" class="form-control" id="newpassword" value=newpassword action='signUp'>
->>>>>>> ea99bcc3c5af8e68e9b770069c301fe2988c69bb
           </div>
         </form>
       </div>
