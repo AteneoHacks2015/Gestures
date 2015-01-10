@@ -14,6 +14,8 @@ export default Ember.Controller.extend({
             {"user_session": {"login":login, "password":password}},
             function(data){
               self.set('isAuthenticated', true);
+
+              console.log(data);
               $('#login').modal('hide');
               self.transitionToRoute("/user");
           });
