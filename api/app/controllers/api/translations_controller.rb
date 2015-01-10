@@ -1,10 +1,10 @@
 class Api::TranslationsController < Api::ApplicationController
 
 	def index
-		@item = Item.find(params[:user_id])
+		@item = Item.find(params[:item_id])
 		@translations = @item.translations
 		render json: @translations,
-			   includes: [:gestures],
+			   include: [:gestures],
 			   status: :ok
 	end
 
@@ -18,7 +18,7 @@ class Api::TranslationsController < Api::ApplicationController
 			@translation.gestures << @gestures
 			
 			render json: @translation,
-			   	   includes: [:gestures],
+			   	   include: [:gestures],
 			       status: :created
 		else
 			render json: {errors: @item.translations.errors.full_messages},
@@ -29,7 +29,7 @@ class Api::TranslationsController < Api::ApplicationController
 	def show
 		@item = Item.find(params[:item_id])
 		@translation = @item.translations.find(params[:id])
-		render json: @translation, includes: [:gestures], status: :ok
+		render json: @translation, include: [:gestures], status: :ok
 	end
 
 	def update
@@ -37,7 +37,7 @@ class Api::TranslationsController < Api::ApplicationController
 		@translation = @item.translations.find(params[:id])
 		if @translation.update(translation_params)
 			render json: @translation,
-			   	   includes: [:gestures],
+			   	   include: [:gestures],
 			       status: :created
 		else
 			render json: {errors: @translation.errors.full_messages},
