@@ -11,6 +11,15 @@
 
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="nav navbar-nav navbar-right">
+<<<<<<< HEAD
+        {{!-- {{#if isAuthenticated}} --}}
+          {{!-- <li><a href="" target="_blank" {{action "destroySession"}}>Logout</a></li> --}}
+          {{!-- <li><a href="" target="_blank">Roles</a></li> --}}
+        {{!-- {{else}} --}}
+          <li><a href="" target="_blank" id="sign-up" data-toggle="modal" data-target="#signUp">Sign Up</a></li>
+          <li><a href="" target="_blank" id="login" data-toggle="modal" data-target="#login">Login</a></li>
+        {{!-- {{/if}} --}}
+=======
         {{#if isAuthenticated}}
           <li class="dropdown">
             <a href="" class="dropdown-toggle" data-toggle="dropdown">Hi User!<span class="caret"></span></a>
@@ -25,6 +34,7 @@
           <li><a href="" target="_blank" data-toggle="modal" data-target="#signUp">Sign Up</a></li>
           <li><a href="" target="_blank" data-toggle="modal" data-target="#login">Login</a></li>
         {{/if}}
+>>>>>>> 6b3de8acfd32a35f7b9d4368183b8b3d1092be27
       </ul>
     </div>
   </div>
