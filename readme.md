@@ -109,7 +109,7 @@ bower install
 ```
 
 ### API Documentation
-Please see this [document](://docs.google.com/spreadsheets/d/1ITWcWeSHbmLxwU--XVvDFjmFdTAahKfmJY5HVBDVp8M/edit?usp=sharing).
+Please see this [document](http://docs.google.com/spreadsheets/d/1ITWcWeSHbmLxwU--XVvDFjmFdTAahKfmJY5HVBDVp8M/edit?usp=sharing).
 
 ### Starting the App
 
