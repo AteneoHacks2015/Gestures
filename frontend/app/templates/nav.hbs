@@ -1,0 +1,91 @@
+<!-- Navbar -->
+<nav id="homeNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Gestures</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="nav navbar-nav navbar-right">
+        {{!-- {{#if isAuthenticated}} --}}
+          {{!-- <li><a href="" target="_blank" {{action "destroySession"}}>Logout</a></li> --}}
+          {{!-- <li><a href="" target="_blank">Roles</a></li> --}}
+        {{!-- {{else}} --}}
+          <li><a href="" target="_blank" data-toggle="modal" data-target="#signUp">Sign Up</a></li>
+          <li><a href="" target="_blank" data-toggle="modal" data-target="#login">Login</a></li>
+        {{!-- {{/if}} --}}
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+{{!-- Modals --}}
+
+<!-- SignUp -->
+<div class="modal fade" id="signUp">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title">Sign Up to Gestures!</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="name" class="control-label">Name</label>
+            <input type="text" class="form-control" id="name" value=name>
+          </div>
+          <div class="form-group">
+            <label for="age" class="control-label">Age</label>
+            <input type="number" class="form-control" id="age" value=age>
+          </div>
+          <div class="form-group">
+            <label for="newusername" class="control-label">Username</label>
+            <input type="text" class="form-control" id="newusername" value=newusername>
+          </div>
+          <div class="form-group">
+            <label for="newpassword" class="control-label">Password</label>
+            <input type="password" class="form-control" id="newpassword" value=newpassword action='signUp'>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Nevermind.</button>
+        <button type="button" class="btn btn-primary" {{action 'signUp'}}>Sign Up!</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Login -->
+<div class="modal fade" id="login">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title">Login to Recipe Filter!</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="username" class="control-label">Username</label>
+            <input type="text" class="form-control" id="username" value="username">
+          </div>
+          <div class="form-group">
+            <label for="password" class="control-label">Password</label>
+            <input type="password" class="form-control" id="password" value="password" action="createSession">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Nevermind.</button>
+        <button type="button" class="btn btn-primary" {{action 'createSession'}}>Login!</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -22,4 +22,8 @@ app.import('bower_components/bootstrap-sass-official/assets/fonts/bootstrap/glyp
   destDir: 'fonts/bootstrap/'
 });
 
+fingerprint: {
+    exclude: ['assets/images']
+}
+
 module.exports = app.toTree();
