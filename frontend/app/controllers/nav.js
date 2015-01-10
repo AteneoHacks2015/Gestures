@@ -19,7 +19,6 @@ export default Ember.Controller.extend({
                 user_id: data.id
               });
 
-              console.log(data);
               $('#login').modal('hide');
               self.transitionToRoute("/user");
           });

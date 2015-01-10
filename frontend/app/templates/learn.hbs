@@ -1,51 +1,131 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h1 id="phrase">Phrase</h1>
+          <h1 id="phrase">{{model.phrase}}</h1>
         </div>
       </div>
 
-      <div class="row">
-        <div class="col-md-1">
-        </div>
-
-        <div class="col-md-1">
-			<img src="/assets/sample-circle.png" alt="" height="60%" width="60%" {{action "addSign" "sample-circle.png" 1}}>
-        </div>
-        <div class="col-md-1">
-			<img src="/assets/sample-circle.png" alt="" height="60%" width="60%" {{action "addSign" "sample-circle.png" 2}}>
-        </div>
-        <div class="col-md-1">
-			<img src="/assets/sample-circle.png" alt="" height="60%" width="60%" {{action "addSign" "sample-circle.png" 3}}>
-        </div>
-        <div class="col-md-1">
-			<img src="/assets/sample-circle.png" alt="" height="60%" width="60%" {{action "addSign" "sample-circle.png" 4}}>
-        </div>
-        <div class="col-md-1">
-			<img src="/assets/sample-circle.png" alt="" height="60%" width="60%" {{action "addSign" "sample-circle.png" 5}}>
-        </div>
-        <div class="col-md-1">
-			<img src="/assets/sample-circle.png" alt="" height="60%" width="60%" {{action "addSign" "sample-circle.png" 6}}>
-        </div>
-        <div class="col-md-1">
-			<img src="/assets/sample-circle.png" alt="" height="60%" width="60%" {{action "addSign" "sample-circle.png" 7}}>
-        </div>
-        <div class="col-md-1">
-			<img src="/assets/sample-circle.png" alt="" height="60%" width="60%" {{action "addSign" "sample-circle.png" 8}}>
-        </div>
-        <div class="col-md-1">
-			<img src="/assets/sample-circle.png" alt="" height="60%" width="60%" {{action "addSign" "sample-circle.png" 9}}>
-        </div>
-        <div class="col-md-1">
-			<img src="/assets/sample-circle.png" alt="" height="60%" width="60%" {{action "addSign" "sample-circle.png" 10}}>
-        </div>
-
+      <div id="add-signs" class="row" style="text-align:center;">
+        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#signs">Add Signs</button>
+        <br><br>
       </div>
 
       <div class="row">
           <h1 style="text-align:center;">Answer</h1>
-        <div class="col-md-12" id="gesture-set">
+        <div class="col-md-12" id="gesture-set" style="text-align:center;">
         </div>
-          <p id="submit-answer"><a class="btn btn-primary btn-lg" href="#" role="button">Submit Answer</a></p>
+          <p id="submit-answer"><a class="btn btn-primary btn-lg" role="button" {{action "submit" model.item_id}}>Submit Answer</a></p>
       </div>
     </div>
+
+
+{{!-- Modals --}}
+
+<!-- Hand Signs -->
+<div class="modal fade" id="signs">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title">Add hand signs.</h4>
+      </div>
+      <div class="modal-body">
+      <div class="row">
+        <img src="/assets/gestures/sign-letters-circles/a.png" alt="" height="15%" width="15%" {{action "addSign" "a.png" 1}}>
+        <img src="/assets/gestures/sign-letters-circles/b.png" alt="" height="15%" width="15%" {{action "addSign" "b.png" 2}}>
+        <img src="/assets/gestures/sign-letters-circles/c.png" alt="" height="15%" width="15%" {{action "addSign" "c.png" 3}}>
+        <img src="/assets/gestures/sign-letters-circles/d.png" alt="" height="15%" width="15%" {{action "addSign" "d.png" 4}}>
+        <img src="/assets/gestures/sign-letters-circles/e.png" alt="" height="15%" width="15%" {{action "addSign" "e.png" 5}}>
+        <img src="/assets/gestures/sign-letters-circles/f.png" alt="" height="15%" width="15%" {{action "addSign" "f.png" 6}}>
+      </div>  
+      <div class="row">
+        <img src="/assets/gestures/sign-letters-circles/g.png" alt="" height="15%" width="15%" {{action "addSign" "g.png" 7}}>
+        <img src="/assets/gestures/sign-letters-circles/h.png" alt="" height="15%" width="15%" {{action "addSign" "h.png" 8}}>
+        <img src="/assets/gestures/sign-letters-circles/i.png" alt="" height="15%" width="15%" {{action "addSign" "i.png" 9}}>
+        <img src="/assets/gestures/sign-letters-circles/j.png" alt="" height="15%" width="15%" {{action "addSign" "j.png" 10}}>
+        <img src="/assets/gestures/sign-letters-circles/k.png" alt="" height="15%" width="15%" {{action "addSign" "k.png" 11}}>
+        <img src="/assets/gestures/sign-letters-circles/l.png" alt="" height="15%" width="15%" {{action "addSign" "l.png" 12}}>
+      </div>  
+      <div class="row">
+        <img src="/assets/gestures/sign-letters-circles/m.png" alt="" height="15%" width="15%" {{action "addSign" "m.png" 13}}>
+        <img src="/assets/gestures/sign-letters-circles/n.png" alt="" height="15%" width="15%" {{action "addSign" "n.png" 14}}>
+        <img src="/assets/gestures/sign-letters-circles/o.png" alt="" height="15%" width="15%" {{action "addSign" "o.png" 15}}>
+        <img src="/assets/gestures/sign-letters-circles/p.png" alt="" height="15%" width="15%" {{action "addSign" "p.png" 16}}>
+        <img src="/assets/gestures/sign-letters-circles/q.png" alt="" height="15%" width="15%" {{action "addSign" "q.png" 17}}>
+        <img src="/assets/gestures/sign-letters-circles/r.png" alt="" height="15%" width="15%" {{action "addSign" "r.png" 18}}>
+      </div>  
+      <div class="row">
+        <img src="/assets/gestures/sign-letters-circles/s.png" alt="" height="15%" width="15%" {{action "addSign" "s.png" 19}}>
+        <img src="/assets/gestures/sign-letters-circles/t.png" alt="" height="15%" width="15%" {{action "addSign" "t.png" 20}}>
+        <img src="/assets/gestures/sign-letters-circles/u.png" alt="" height="15%" width="15%" {{action "addSign" "u.png" 21}}>
+        <img src="/assets/gestures/sign-letters-circles/v.png" alt="" height="15%" width="15%" {{action "addSign" "v.png" 22}}>
+        <img src="/assets/gestures/sign-letters-circles/w.png" alt="" height="15%" width="15%" {{action "addSign" "w.png" 23}}>
+        <img src="/assets/gestures/sign-letters-circles/x.png" alt="" height="15%" width="15%" {{action "addSign" "x.png" 24}}>
+      </div>  
+      <div class="row">
+        <img src="/assets/gestures/sign-letters-circles/y.png" alt="" height="15%" width="15%" {{action "addSign" "y.png" 25}}>
+        <img src="/assets/gestures/sign-letters-circles/z.png" alt="" height="15%" width="15%" {{action "addSign" "z.png" 26}}>
+        <img src="/assets/gestures/words/Are.png" alt="" height="15%" width="15%" {{action "addSign" "Are.png" 27}}>
+        <img src="/assets/gestures/words/Good.png" alt="" height="15%" width="15%" {{action "addSign" "Good.png" 28}}>
+        <img src="/assets/gestures/words/Hello.png" alt="" height="15%" width="15%" {{action "addSign" "Hello.png" 29}}>
+        <img src="/assets/gestures/words/Monkey.png" alt="" height="15%" width="15%" {{action "addSign" "Monkey.png" 30}}>
+      </div>  
+      <div class="row">
+        <img src="/assets/gestures/words/Nice.png" alt="" height="15%" width="15%" {{action "addSign" "Nice.png" 31}}>
+        <img src="/assets/gestures/words/Orange.png" alt="" height="15%" width="15%" {{action "addSign" "Orange.png" 32}}>
+        <img src="/assets/gestures/words/White.png" alt="" height="15%" width="15%" {{action "addSign" "White.png" 33}}>
+        <img src="/assets/gestures/words/Yes.png" alt="" height="15%" width="15%" {{action "addSign" "Yes.png" 34}}>
+        <img src="/assets/gestures/words/You.png" alt="" height="15%" width="15%" {{action "addSign" "You.png" 35}}>
+        <img src="/assets/gestures/words/afternoon.png" alt="" height="15%" width="15%" {{action "addSign" "afternoon.png" 36}}>
+      </div>
+      <div lass="row">
+        <img src="/assets/gestures/words/bathroom.png" alt="" height="15%" width="15%" {{action "addSign" "bathroom.png" 37}}>
+        <img src="/assets/gestures/words/beautiful.png" alt="" height="15%" width="15%" {{action "addSign" "beautiful.png" 38}}>        
+      </div>  
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Done!</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Success -->
+<div class="modal fade" id="success">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title">Congrats! You got it right.</h4>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Next!</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Fail -->
+<div class="modal fade" id="fail">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title">Aw. You got it wrong. :(</h4>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" {{action "reset"}}>Try again.</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
