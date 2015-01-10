@@ -1,0 +1,55 @@
+<div class="container" id="add">
+  <div id="creation-success" class="alert alert-success collapse">
+    <a href="#" class="close" data-dismiss="alert">&times;</a>
+    <strong>Success!</strong> You have successfully added your translation.
+  </div>
+
+	<h1>Update translation</h1><br>
+	<h3>Phrase</h3>
+  <select class="form-control" id="phrase">
+      <option value="">Phrase 01</option>
+      <option value="">Phrase 02</option>
+      <option value="">Phrase 03</option>
+  </select>
+  
+  <h3>Difficulty</h3>
+  <select class="form-control" id="difficulty">
+      <option value="1">Easy</option>
+      <option value="2">Medium</option>
+      <option value="3">Hard</option>
+  </select>
+	
+  <div id="add-signs">
+		<h3>Signs</h3>
+		<button class="btn btn-primary" data-toggle="modal" data-target="#signs">Add Sign</button>
+		<br><br>
+	</div>
+
+	<br>
+	<button class="btn btn-primary" {{action "updateTranslation"}}>Submit!</button>
+</div>
+
+{{!-- Modals --}}
+
+<!-- Hand Signs -->
+<div class="modal fade" id="signs">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title">Add hand signs.</h4>
+      </div>
+      <div class="modal-body">
+		<img src="/assets/sample-circle.png" alt="" height="15%" width="15%" {{action "addSign" "sample-circle.png" 1}}>
+		<img src="/assets/sample-circle.png" alt="" height="15%" width="15%" {{action "addSign" "sample-circle.png" 2}}>
+		<img src="/assets/sample-circle.png" alt="" height="15%" width="15%" {{action "addSign" "sample-circle.png" 3}}>
+		<img src="/assets/sample-circle.png" alt="" height="15%" width="15%" {{action "addSign" "sample-circle.png" 4}}>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Done!</button>
+      </div>
+    </div>
+  </div>
+</div>

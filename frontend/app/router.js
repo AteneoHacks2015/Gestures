@@ -16,6 +16,14 @@ Router.map(function() {
     path: "user/item/new"
   });
 
+  this.route("update", {
+    path: "user/item/update"
+  });
+
+  this.route("show", {
+    path: "user/item/show"
+  });
+
   this.resource("user", function() {
     this.route("translations");
   });
