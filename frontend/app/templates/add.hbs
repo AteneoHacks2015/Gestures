@@ -2,8 +2,15 @@
 	<h1>Add translation</h1><br>
 	<h3>Phrase</h3>
 	{{input type="text" placeholder="Enter word or phrase to translate." valueBinding="phrase"}}<br>
-
-	<div id="add-signs">
+  
+  <h3>Difficulty</h3>
+  <select class="form-control" id="difficulty">
+      <option value="1">Easy</option>
+      <option value="2">Medium</option>
+      <option value="3">Hard</option>
+  </select>
+	
+  <div id="add-signs">
 		<h3>Signs</h3>
 		<button class="btn btn-primary" data-toggle="modal" data-target="#signs">Add Sign</button>
 		<br><br>
@@ -37,3 +44,4 @@
     </div>
   </div>
 </div>
+

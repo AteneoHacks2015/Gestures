@@ -13,8 +13,19 @@ export default Ember.Controller.extend({
 		},
 
 		createTranslation: function(){
-			console.log(this.get('sign_array'));
-			console.log(this.get('phrase'));
+			var phrase = this.get('phrase');
+			var difficulty = $('#difficulty').val();
+			var signs = this.get('sign_array');
+
+			if(!Ember.isEmpty(phrase) && !Ember.isEmpty(difficulty)){
+				$.post(
+					'/api/items/',
+					{"item": {"phrase":phrase, "difficulty":difficulty}},
+					function(data){
+						transitionToRoute('user');
+					}
+				);
+			}
 		}
 	}
 });
