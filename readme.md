@@ -125,7 +125,11 @@ cd path/to/Gestures/api
 ember serve --proxy http://localhost:3000
 ```
 
-You can visit your app at [http://localhost:4200](http://localhost:4200).
+You can visit your app at [http://localhost:4200](http://localhost:4200). If you get the ```watch ENOSPC``` error while running the server, run this in the terminal:
+
+```bash
+echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+```
 
 ### Further Notes
 
