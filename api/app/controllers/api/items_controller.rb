@@ -41,8 +41,8 @@ class Api::ItemsController < Api::ApplicationController
   end
 
   def submit_answer
-    @item = Item.find(params[:id])
-    @answer = Translation.new(params[:answer])
+    @item = Item.find(params[:item_id])
+    @answer = params[:translation][:gestures] * ','
     if @item.correct? @answer
       @current_user.exp_up(@item.points)
       render json: {user: @current_user,
