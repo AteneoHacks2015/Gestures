@@ -27,6 +27,20 @@ class Api::ItemsController < Api::ApplicationController
     render json: @items, status: :ok
   end
 
+  def submit_answer
+    @item = Item.find(params[:id])
+    @answer = Translation.new(params[:answer])
+    if @item.correct? @answer
+      @current_user.exp_up(@item.points)
+      render json: {user: @current_user,
+                    message: "correct",
+                    status: :ok}
+    else
+      render json: {message: "incorrect",
+                    status: :ok}
+    end
+  end
+
   private
 
   def item_params
