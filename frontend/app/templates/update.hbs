@@ -7,9 +7,9 @@
 	<h1>Update translation</h1><br>
 	<h3>Phrase</h3>
   <select class="form-control" id="phrase">
-      <option value="">Phrase 01</option>
-      <option value="">Phrase 02</option>
-      <option value="">Phrase 03</option>
+      {{#each item in model}}
+        <option>{{item.phrase}}</option></p>
+      {{/each}}
   </select>
   
   <h3>Difficulty</h3>
