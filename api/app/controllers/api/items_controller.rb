@@ -17,7 +17,9 @@ class Api::ItemsController < Api::ApplicationController
 
   def create
     if @current_user.items.create(item_params)
-      render json: @current_user.items.last, status: :created
+      render json: @current_user.items.last,
+             includes: [:transitions],
+             status: :created
     else
       render json: {errors: @current_user.items.errors.full_messages},
              status: :bad_request
@@ -26,12 +28,16 @@ class Api::ItemsController < Api::ApplicationController
 
   def show
     @item = Item.find(params[:id])
-    render json: @item, status: :ok
+    render json: @item,
+           includes: [:transitions],
+           status: :ok
   end
 
   def user_items
     @items = @current_user.items
-    render json: @items, status: :ok
+    render json: @items,
+           includes: [:transitions],
+           status: :ok
   end
 
   def submit_answer
