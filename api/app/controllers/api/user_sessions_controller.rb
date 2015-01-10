@@ -25,7 +25,8 @@ class Api::UserSessionsController < Api::ApplicationController
 
       render json: data, status: :created
     else
-      render json: {}, status: :unauthorized
+      render json: {errors: user_session.errors.full_messages},
+             status: :unauthorized
     end
   end
 
