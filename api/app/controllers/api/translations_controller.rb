@@ -11,11 +11,12 @@ class Api::TranslationsController < Api::ApplicationController
 	def create
 		trans_params = translation_params
 		@item = Item.find(params[:item_id])
+		
 		if @item.translations.create({name: trans_params[:name]})
 			@gestures = Gesture.find(trans_params[:gestures])
 			@translation = @item.translations.last
 			@translation.gestures << @gestures
-
+			
 			render json: @translation,
 			   	   includes: [:gestures],
 			       status: :created
@@ -47,6 +48,6 @@ class Api::TranslationsController < Api::ApplicationController
 	private
 
 	def translation_params
-		params.require(:translation).permit(:name, :gestures)
+		params.require(:translation).permit!
 	end
 end
