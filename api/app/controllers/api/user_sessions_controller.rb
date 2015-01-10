@@ -8,12 +8,7 @@ class Api::UserSessionsController < Api::ApplicationController
       render json: {}, status: :bad_request and return
     end
 
-    if @user[:remember_token].present?
-      user = User.find_by_single_access_token(@user[:remember_token])
-      user_session = UserSession.create(user) unless user.blank?
-    else
-      user_session = UserSession.new(login: @user[:login], password: @user[:password])
-    end
+    user_session = UserSession.new(login: @user[:login], password: @user[:password])
 
     if user_session && user_session.save
       current_user.reset_single_access_token! unless @user[:remember_token].present?
@@ -41,6 +36,6 @@ class Api::UserSessionsController < Api::ApplicationController
 
   private
     def user_session_params
-      params.require(:user_session).permit(:login, :password, :remember_token)
+      params.require(:user_session).permit(:login, :password)
     end
 end
