@@ -11,7 +11,7 @@ class Api::UserSessionsController < Api::ApplicationController
     user_session = UserSession.new(login: @user[:login], password: @user[:password])
 
     if user_session && user_session.save
-      current_user.reset_single_access_token! unless @user[:remember_token].present?
+      current_user.reset_single_access_token!
 
       data = {
         auth_token: current_user.single_access_token,

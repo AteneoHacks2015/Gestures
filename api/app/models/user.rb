@@ -5,5 +5,4 @@ class User < ActiveRecord::Base
     c.require_password_confirmation = false
   end
 
-  has_many :recipes
 end
