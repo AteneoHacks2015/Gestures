@@ -12,13 +12,13 @@ class Api::ItemsController < Api::ApplicationController
       @items = Item.random_items(difficulty, count)
     end
 
-    render json: @items, includes: [:transitions], status: :ok
+    render json: @items, include: [:translations], status: :ok
   end
 
   def create
     if @current_user.items.create(item_params)
       render json: @current_user.items.last,
-             includes: [:transitions],
+             include: [:translations],
              status: :created
     else
       render json: {errors: @current_user.items.errors.full_messages},
@@ -29,14 +29,14 @@ class Api::ItemsController < Api::ApplicationController
   def show
     @item = Item.find(params[:id])
     render json: @item,
-           includes: [:transitions],
+           include: :translations,
            status: :ok
   end
 
   def user_items
     @items = @current_user.items
     render json: @items,
-           includes: [:transitions],
+           include: [:translations],
            status: :ok
   end
 
