@@ -17,6 +17,11 @@ class Api::ItemsController < Api::ApplicationController
     end
   end
 
+  def show
+    @item = Item.find(params[:id])
+    render json: @item, status: :ok
+  end
+
   def user_items
     @items = @current_user.items
     render json: @items, status: :ok

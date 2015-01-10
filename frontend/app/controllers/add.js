@@ -22,7 +22,7 @@ export default Ember.Controller.extend({
 					'/api/items/',
 					{"item": {"phrase":phrase, "difficulty":difficulty}},
 					function(data){
-						transitionToRoute('user');
+						console.log(data);
 					}
 				);
 			}
