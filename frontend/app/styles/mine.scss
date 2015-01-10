@@ -4,8 +4,8 @@
 }
 
 body{
-  color: #f3f3f3;
-  background-image: url('/assets/blue.png');
+  color: #2c3e50;
+  /*background-image: url('/assets/blue.png');*/
   background-repeat: repeat;
 }
 
@@ -54,5 +54,39 @@ body{
   background-color: #27ae60;
 }
 
+input{
+  background-color: #ecf0f1;
+  color: #34495e;
+  font-size: 1.5em;
+  padding: 1%;
+  width: 50%;
+  height: auto;
+}
 
+input:hover{
+  background-color: white;
+}
 
+.form-control{
+    background-color: #ecf0f1;
+    color: #34495e;
+    font-size: 1.5em;
+    padding: 1%;
+    width: 50%;
+    height: auto;
+}
+
+.form-control:hover{
+  background-color: white;
+}
+
+.dropdown-menu>li>a{
+  color: #2c3e50;
+}
+.dropdown-menu>li>a:hover{
+  font-weight: bold;
+}
+
+.navbar{
+  background-color: #2c3e50;
+}
