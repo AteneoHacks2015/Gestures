@@ -10,9 +10,25 @@ Router.map(function() {
     path: "/"
   });
 
-  this.route("translate");
-  this.route("add", {path:'user/item/new'});
-  this.resource("user", function() {});
+  this.route("learn");
+
+  this.route("add", {
+    path: "user/item/new"
+  });
+
+  this.route("update", {
+    path: "user/item/update"
+  });
+
+  this.route("show", {
+    path: "user/item/show"
+  });
+
+  this.resource("user", function() {
+    this.route("translations");
+  });
+
+  this.resource("items", function() {});
 });
 
 export default Router;
