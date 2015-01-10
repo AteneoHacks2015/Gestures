@@ -4,13 +4,22 @@ class Api::ItemsController < Api::ApplicationController
   def index
     difficulty = params[:difficulty] || 1
     count = params[:count] || 3
-    @items = Item.random_items(difficulty, count)
-    render json: @items, status: :ok
+    all = params[:all] || false
+
+    if all
+      @items = Item.all
+    else
+      @items = Item.random_items(difficulty, count)
+    end
+
+    render json: @items, include: [translations: {include: :gestures}], status: :ok
   end
 
   def create
     if @current_user.items.create(item_params)
-      render json: @current_user.items.last, status: :created
+      render json: @current_user.items.last,
+             include: [translations: {include: :gestures}],
+             status: :created
     else
       render json: {errors: @current_user.items.errors.full_messages},
              status: :bad_request
@@ -19,17 +28,21 @@ class Api::ItemsController < Api::ApplicationController
 
   def show
     @item = Item.find(params[:id])
-    render json: @item, status: :ok
+    render json: @item,
+           include: [translations: {include: :gestures}],
+           status: :ok
   end
 
   def user_items
     @items = @current_user.items
-    render json: @items, status: :ok
+    render json: @items,
+           include: [translations: {include: :gestures}],
+           status: :ok
   end
 
   def submit_answer
-    @item = Item.find(params[:id])
-    @answer = Translation.new(params[:answer])
+    @item = Item.find(params[:item_id])
+    @answer = params[:translation][:gestures] * ','
     if @item.correct? @answer
       @current_user.exp_up(@item.points)
       render json: {user: @current_user,
