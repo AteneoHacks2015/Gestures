@@ -20,6 +20,14 @@ ActiveRecord::Schema.define(version: 20150110140812) do
     t.string "name"
   end
 
+  create_table "gestures_translations", force: :cascade do |t|
+    t.integer "gesture_id"
+    t.integer "translation_id"
+  end
+
+  add_index "gestures_translations", ["gesture_id"], name: "index_gestures_translations_on_gesture_id", using: :btree
+  add_index "gestures_translations", ["translation_id"], name: "index_gestures_translations_on_translation_id", using: :btree
+
   create_table "items", force: :cascade do |t|
     t.text    "phrase"
     t.integer "difficulty"
@@ -35,14 +43,6 @@ ActiveRecord::Schema.define(version: 20150110140812) do
   end
 
   add_index "translations", ["item_id"], name: "index_translations_on_item_id", using: :btree
-
-  create_table "translations_gestures", force: :cascade do |t|
-    t.integer "translation_id"
-    t.integer "gesture_id"
-  end
-
-  add_index "translations_gestures", ["gesture_id"], name: "index_translations_gestures_on_gesture_id", using: :btree
-  add_index "translations_gestures", ["translation_id"], name: "index_translations_gestures_on_translation_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "login",                           null: false

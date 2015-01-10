@@ -1,4 +1,4 @@
-class CreateTranslationsAndGestures < ActiveRecord::Migration
+class CreateGesturesAndTranslations < ActiveRecord::Migration
   def change
   	
     create_table :gestures do |t|
