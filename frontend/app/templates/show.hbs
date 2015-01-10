@@ -6,8 +6,9 @@
 	<h3>{{item.phrase}}</h3>
 	<h3><small>Difficulty: Easy</small></h3><br>
 	<div class="row">
-	<img src="/assets/sample-circle.png" alt="" height="7%" width="7%">
-	<img src="/assets/sample-circle.png" alt="" height="7%" width="7%">
+	{{#each gesture in item.src}}
+		<img src="{{ gesture }}" alt="" height="7%" width="7%">
+	{{/each}}
 	</div>
 	<br><br>
   {{/each}}

@@ -4,8 +4,13 @@ export default Ember.Controller.extend({
 	sign_array: [],
 	actions:{
 		addSign: function(name, id){
-	      $('#add-signs').append('<img src="/assets/'+name+'" alt="" height="5%" width="5%" {{action "deleteSign"}}>');
-	      this.get('sign_array').push(id);
+			if(id<=26){
+		      	$('#add-signs').append('<img src="/assets/gestures/sign-letters-circles/'+name+'" alt="" height="5%" width="5%" {{action "deleteSign"}}>');
+			}
+			else{
+		      	$('#add-signs').append('<img src="/assets/gestures/words/'+name+'" alt="" height="5%" width="5%" {{action "deleteSign"}}>');				
+			}
+	      	this.get('sign_array').push(id);
 		},
 
 		deleteSign: function(){

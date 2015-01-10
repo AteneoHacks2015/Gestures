@@ -4,7 +4,12 @@ export default Ember.Controller.extend({
 	sign_array: [],
 	actions:{
 		addSign: function(name, id){
-	      $('#add-signs').append('<img src="/assets/'+name+'" alt="" height="5%" width="5%" {{action "deleteSign"}}>');
+			if(id<=26){
+		      	$('#add-signs').append('<img src="/assets/gestures/sign-letters-circles/'+name+'" alt="" height="5%" width="5%" {{action "deleteSign"}}>');
+			}
+			else{
+		      	$('#add-signs').append('<img src="/assets/gestures/words/'+name+'" alt="" height="5%" width="5%" {{action "deleteSign"}}>');				
+			}
 	      this.get('sign_array').push(id);
 		},
 
@@ -13,9 +18,11 @@ export default Ember.Controller.extend({
 		},
 
 		updateTranslation: function(){
-			var phrase = $('#phrase').text();
+			var phrase = $('#phrase').val();
 			var difficulty = $('#difficulty').val();
 			var signs = this.get('sign_array');
+
+			console.log(phrase);
 
 			if(!Ember.isEmpty(phrase) && !Ember.isEmpty(difficulty)){
 				$.post(

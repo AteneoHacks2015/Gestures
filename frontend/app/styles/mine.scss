@@ -3,7 +3,6 @@
   src: url('/assets/PENMP___.TTF') format('truetype');
 }
 
-
 body{
   color: #f3f3f3;
 }
@@ -80,8 +79,6 @@ img{
   margin-right: 10%;
 }
 
-.decor{
-}
 
 .homepage-pic{
   margin-top: -10%;
@@ -110,25 +107,62 @@ img{
   background-color: #0099CC;
 }
 
-#sign-up{
+#signUp{
   font-weight: bold;
-  background-color: #d35400;
+  background-color: #2ecc71;
   color: white;
 }
 
-#sign-up:hover{
-  background-color: #f39c12;
+#signUp:hover{
+  background-color: #27ae60;
 }
 
 #login{
-  background-color: #e67e22;
+  background-color: #2ecc71;
   color: white;
 }
 
 #login:hover{
-  background-color: #f39c12;
+  background-color: #27ae60;
 }
 
+input{
+  background-color: #ecf0f1;
+  color: #34495e;
+  font-size: 1.5em;
+  padding: 1%;
+  width: 50%;
+  height: auto;
+}
 
+input:hover{
+  background-color: white;
+}
 
+.form-control{
+    background-color: #ecf0f1;
+    color: #34495e;
+    font-size: 1.5em;
+    padding: 1%;
+    width: 50%;
+    height: auto;
+}
 
+.form-control:hover{
+  background-color: white;
+}
+
+.dropdown-menu>li>a{
+  color: #2c3e50;
+}
+.dropdown-menu>li>a:hover{
+  font-weight: bold;
+}
+
+.navbar{
+  background-color: #092D38;
+}
+
+.control-label{
+  color: #092D38;
+}
