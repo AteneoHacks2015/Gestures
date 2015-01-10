@@ -22,7 +22,7 @@ export default Ember.Controller.extend({
 					'/api/items/',
 					{"item": {"phrase":phrase, "difficulty":difficulty}},
 					function(data){
-						console.log(data);
+						$('#add').append('<br><br><div id="creation-success" class="alert alert-success">'+'<a href="#" class="close" data-dismiss="alert">&times;</a>'+'<strong>Success!</strong> You have successfully added your translation.'+'</div>');
 					}
 				);
 			}
