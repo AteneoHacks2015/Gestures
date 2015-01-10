@@ -13,30 +13,22 @@ export default Ember.Controller.extend({
             '/api/users/login',
             {"user_session": {"login":login, "password":password}},
             function(data){
-              var user = self.store.createRecord('user', {
-                user: login,
-              });
-
-              user.save();
-
               self.set('isAuthenticated', true);
+
+              console.log(data);
               $('#login').modal('hide');
-              self.transitionToRoute("/add");
+              self.transitionToRoute("/user");
           });
       }
     },
 
     destroySession: function(){
       var self = this;
-
       if(typeof $.cookie("user_credentials") !== undefined){
        $.ajax({
         url: '/api/users/logout',
         type: 'DELETE',
         success: function(data){
-          self.store.find('user').then(function(post){
-            post.destroyRecord();
-          });
           self.set('isAuthenticated', false);
           self.transitionToRoute('/');
         }
@@ -46,17 +38,19 @@ export default Ember.Controller.extend({
 
     signUp: function(){
       var self = this;
-      var login = this.get('username');
-      var password = this.get('password');
-
+      var login = this.get('newusername');
+      var password = this.get('newpassword');
+      var name = this.get('name');
+      var school = this.get('school');
+ 
       if(!Ember.isEmpty(login) && !Ember.isEmpty(password)){
         $.post(
             '/api/users/',
-            {"user": {"login":login, "password":password}},
+            {"user": {"login":login, "password":password, "role":"player", "name": name, "school": school}},
             function(data){
               self.set('isAuthenticated', true);
               $('#signUp').modal('hide');
-              self.transitionToRoute("/add");
+              self.transitionToRoute("/user");
           });
       }
     }

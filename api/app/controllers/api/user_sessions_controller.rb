@@ -15,7 +15,8 @@ class Api::UserSessionsController < Api::ApplicationController
 
       data = {
         auth_token: current_user.single_access_token,
-        user_id: current_user.id
+        user_id: current_user.id,
+        login: current_user.login
       }
 
       render json: data, status: :created
