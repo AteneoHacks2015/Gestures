@@ -6,8 +6,11 @@ Rails.application.routes.draw do
       collection do
         post '/login', to: 'user_sessions#create', as: 'login'
         delete '/logout', to: 'user_sessions#destroy', as: 'logout'
-
       end
+    end
+
+    resources :items, except: [:new, :edit] do
+      resources :translations, except: [:new, :edit, :show]
     end
   end
 end

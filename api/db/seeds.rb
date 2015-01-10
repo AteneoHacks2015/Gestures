@@ -6,10 +6,18 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-user_params = {login: 'mpandres',
-               password: 'password',
-               role: 'player',
-               name: 'Mireya Andres',
-               school: 'UP Diliman'}
+player_params = {login: 'mpandres',
+                 password: 'password',
+                 role: 'player',
+                 name: 'Mireya Andres',
+                 school: 'UP Diliman'}
 
-user = User.create(user_params)
+translator_params = {login: 'nmcalabroso',
+                     password: 'password',
+                     role: 'translator',
+                     name: 'Neil Calabroso',
+                     school: 'Ateneo De Manila University'
+                     }
+
+player = User.create(player_params)
+translator = User.create(translator_params)
