@@ -4,9 +4,7 @@ class Api::ItemsController < Api::ApplicationController
   def index
     difficulty = params[:difficulty] || 1
     count = params[:count] || 3
-
     @items = Item.random_items(difficulty, count)
-
     render json: @items, status: :ok
   end
 
@@ -17,6 +15,11 @@ class Api::ItemsController < Api::ApplicationController
       render json: {errors: @current_user.items.errors.full_messages},
              status: :bad_request
     end
+  end
+
+  def user_items
+    @items = @current_user.items
+    render json: @items, status: :ok
   end
 
   private

@@ -9,6 +9,10 @@ Rails.application.routes.draw do
       end
     end
 
+    resource :user, only: [] do
+      get '/items', to: 'items#user_items', as: 'items'
+    end
+
     resources :items, except: [:new, :edit] do
       resources :translations, except: [:new, :edit, :show]
     end
