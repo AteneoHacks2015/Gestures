@@ -21,3 +21,10 @@ translator_params = {login: 'nmcalabroso',
 
 player = User.create(player_params)
 translator = User.create(translator_params)
+
+item_1 = {phrase: "Spell out 'Hello'", difficulty: 1}
+item_2 = {phrase: "Spell out 'Excellence", difficulty: 1}
+item_3 = {phrase: "Spell out 'School", difficulty: 1}
+item_4 = {phrase: "Demonstrate the sign for the word 'Orange'", difficulty: 2}
+item_5 = {phrase: "Demonstrate the sign for the word 'White'", difficulty: 2}
+item_5 = {phrase: "Demonstrate the sign for the word 'Yes'", difficulty: 2}
