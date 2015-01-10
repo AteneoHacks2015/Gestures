@@ -1,11 +1,26 @@
+@font-face {
+  font-family: 'PENMP';
+  src: url('/assets/PENMP___.TTF') format('truetype');
+}
+
+
 body{
-  background-color: #f3f3f3;
+  color: #f3f3f3;
+  background-image: url('/assets/blue.png');
+  background-repeat: repeat;
+}
+
+.homepage-pic{
+  width: 50%;
+  display: inline-block;
+  margin: -90px;
 }
 
 #welcome-text{
   text-align: center;
-  margin-top: 5%;
-  font-size: 120px;
+  margin-top: 1%;
+  font-size: 150px;
+  font-family: 'PENMP';
 }
 
 .modal-content{
@@ -39,3 +54,7 @@ body{
 #login:hover{
   background-color: #f39c12;
 }
+
+
+
+
