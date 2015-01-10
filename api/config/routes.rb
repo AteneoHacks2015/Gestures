@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 
     resources :items, except: [:new, :edit] do
       resources :translations, except: [:new, :edit, :show]
-      post '/submit', to: 'items#submit_answer', as 'submit_answer'
+      post '/submit', to: 'items#submit_answer', as: 'submit_answer'
     end
 
     resources :gestures, only: [:create, :index]
