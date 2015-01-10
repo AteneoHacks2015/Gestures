@@ -26,4 +26,6 @@ fingerprint: {
     exclude: ['assets/images']
 }
 
+app.import('vendor/jquery-cookie/jquery.cookie.js');
+
 module.exports = app.toTree();
