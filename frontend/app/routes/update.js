@@ -11,8 +11,10 @@ export default Ember.Route.extend({
       data.forEach(function(sample){
         var item = self.store.createRecord('items', {        
           phrase: sample.phrase,
-          difficulty: sample.difficulty
+          difficulty: sample.difficulty,
+          item_id: sample.id
         });
+        console.log(item.item_id);
       });
 
       return self.store.all('items');

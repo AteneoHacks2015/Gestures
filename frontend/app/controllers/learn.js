@@ -32,6 +32,11 @@ export default Ember.Controller.extend({
 			$('#fail').modal('hide');
 			this.set('sign_array', []);
 			$('#gesture-set').empty();
+		},
+
+		next: function(){
+			$('#success').modal('hide');
+			window.location.reload(true);
 		}
 	}
 });

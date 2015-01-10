@@ -23,6 +23,7 @@ export default Ember.Controller.extend({
 			var signs = this.get('sign_array');
 
 			console.log(phrase);
+			console.log($('#phrase').attr('id'));
 
 			if(!Ember.isEmpty(phrase) && !Ember.isEmpty(difficulty)){
 				$.post(
