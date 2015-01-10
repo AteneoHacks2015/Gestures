@@ -4,8 +4,15 @@ class Api::ItemsController < Api::ApplicationController
   def index
     difficulty = params[:difficulty] || 1
     count = params[:count] || 3
-    @items = Item.random_items(difficulty, count)
-    render json: @items, status: :ok
+    all = params[:all] || false
+
+    if all
+      @items = Item.all
+    else
+      @items = Item.random_items(difficulty, count)
+    end
+
+    render json: @items, includes: [:transitions], status: :ok
   end
 
   def create
