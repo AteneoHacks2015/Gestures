@@ -3,7 +3,6 @@
   src: url('/assets/PENMP___.TTF') format('truetype');
 }
 
-
 body{
   color: #f3f3f3;
   background-image: url('/assets/blue.png');
@@ -36,25 +35,24 @@ body{
   background-color: #0099CC;
 }
 
-#sign-up{
+#signUp{
   font-weight: bold;
-  background-color: #d35400;
+  background-color: #2ecc71;
   color: white;
 }
 
-#sign-up:hover{
-  background-color: #f39c12;
+#signUp:hover{
+  background-color: #27ae60;
 }
 
 #login{
-  background-color: #e67e22;
+  background-color: #2ecc71;
   color: white;
 }
 
 #login:hover{
-  background-color: #f39c12;
+  background-color: #27ae60;
 }
-
 
 
 
