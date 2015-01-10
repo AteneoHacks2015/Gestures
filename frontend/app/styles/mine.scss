@@ -5,19 +5,91 @@
 
 body{
   color: #f3f3f3;
-  background-image: url('/assets/blue.png');
-  background-repeat: repeat;
 }
 
+h1{
+  font-size: 100px;
+  text-align: left;
+}
+
+a{
+  font-weight: bold;
+  color: #686773;
+  letter-spacing: 0.2em;
+}
+
+a:hover{
+  color: #8d959b;
+  text-decoration: none;
+}
+
+.stuff{
+  background-color: #F3F3F3;
+}
+
+ul{
+  text-decoration: none;
+  list-style: none;
+  text-align: left;
+}
+
+.nav-thing{
+  text-align: center;
+}
+
+.row{
+  margin-left: -5%;
+  margin-right: -5%;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  min-width: 101%;
+  height: 100%;
+}
+
+.one{
+  background-color: rgba(65, 131, 215,1);
+}
+.two{
+  background-color: rgba(65, 131, 215,.8);
+}
+.three{
+  background-color: rgba(65, 131, 215,.5);
+}
+
+p{
+  font-size: 20px;
+  margin-left: 18px;
+  margin-right: 10px;
+  opacity: 1;
+}
+
+h2{
+  font-size: 80px;
+  opacity: 1;
+  margin-bottom: 20px;
+}
+
+
+img{
+  padding-top: 30px;
+  display: inline;
+  float:left; 
+  width:30%;
+  height: 60%;
+  margin-right: 10%;
+}
+
+
 .homepage-pic{
-  width: 50%;
-  display: inline-block;
-  margin: -90px;
+  margin-top: -10%;
+  width: 35%;
+  margin-right: -2%;
 }
 
 #welcome-text{
-  text-align: center;
   margin-top: 1%;
+  margin-left: 3%;
+  margin-bottom: -2%;
   font-size: 150px;
   font-family: 'PENMP';
 }
@@ -54,5 +126,43 @@ body{
   background-color: #27ae60;
 }
 
+input{
+  background-color: #ecf0f1;
+  color: #34495e;
+  font-size: 1.5em;
+  padding: 1%;
+  width: 50%;
+  height: auto;
+}
 
+input:hover{
+  background-color: white;
+}
 
+.form-control{
+    background-color: #ecf0f1;
+    color: #34495e;
+    font-size: 1.5em;
+    padding: 1%;
+    width: 50%;
+    height: auto;
+}
+
+.form-control:hover{
+  background-color: white;
+}
+
+.dropdown-menu>li>a{
+  color: #2c3e50;
+}
+.dropdown-menu>li>a:hover{
+  font-weight: bold;
+}
+
+.navbar{
+  background-color: #092D38;
+}
+
+.control-label{
+  color: #092D38;
+}
