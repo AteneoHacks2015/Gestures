@@ -9,6 +9,20 @@ export default Ember.Route.extend({
       type: 'get'
     }).then(function(data){
       data.forEach(function(sample){
+        var img = [];
+        sample.translations.forEach(function(trans){
+          trans.gestures.forEach(function(gesture) {
+            if(gesture.id <=26){
+              var src = '/assets/gestures/sign-letters-circles/'+gesture.name+'.png';
+            }
+            else{
+              var src = '/assets/gestures/words/'+gesture.name+'.png';
+            }
+
+            img.push(src);
+          });
+        });
+
       	if(sample.difficulty === 1){
       		var difficulty = "Easy";
       	}
@@ -21,7 +35,8 @@ export default Ember.Route.extend({
 
         var item = self.store.createRecord('items', {        
           phrase: sample.phrase,
-          difficulty: sample.difficulty
+          difficulty: sample.difficulty,
+          src: img,
         });
       });
 
