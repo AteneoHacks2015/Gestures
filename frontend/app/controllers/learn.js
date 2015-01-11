@@ -21,6 +21,10 @@ export default Ember.Controller.extend({
 					console.log(data);
 					if(data.message == "correct"){
 						$('#success').modal('show');
+						console.log(data.user.level);
+						if(data.user.level == 2){
+							$('#level-up').modal('show');
+						};
 					}
 					else{
 						$('#fail').modal('show');

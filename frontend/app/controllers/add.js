@@ -14,7 +14,6 @@ export default Ember.Controller.extend({
 		},
 
 		deleteSign: function(){
-
 		},
 
 		createTranslation: function(){
@@ -31,12 +30,19 @@ export default Ember.Controller.extend({
 						'/api/items/'+data.id+'/translations',
 						{"translation": {"gestures": signs}},
 						function(data){
-							console.log(data);
-							$('#add').append('<br><br><div id="creation-success" class="alert alert-success">'+'<a href="#" class="close" data-dismiss="alert">&times;</a>'+'<strong>Success!</strong> You have successfully added your translation.'+'</div>');
+							// console.log(data);
+							// $('#add').append('<br><br><div id="creation-success" class="alert alert-success">'+'<a href="#" class="close" data-dismiss="alert">&times;</a>'+'<strong>Success!</strong> You have successfully added your translation.'+'</div>');
+							$('#success').modal('show');
 						});
 					}
 				);
 			}
+		},
+
+		reset: function(){
+			$('#success').modal('hide');
+			$('#add-signs').empty('');
+			this.set('phrase', '');
 		}
 	}
 });
