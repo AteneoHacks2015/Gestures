@@ -50,6 +50,8 @@ g_33 = {name: "Orange"}
 g_34 = {name: "White"}
 g_35 = {name: "Yes"}
 g_36 = {name: "You"}
+g_37 = {name: "Are"}
+g_38 = {name: "t"}
 
 item_1 = {phrase: "Hello", difficulty: 1}
 item_2 = {phrase: "Excellence", difficulty: 1}
@@ -61,5 +63,5 @@ item_6 = {phrase: "Yes", difficulty: 2}
 player = User.create(player_params)
 translator = User.create(translator_params)
 
-Gesture.create([g_1, g_2, g_3, g_4, g_5, g_6, g_7, g_8, g_9, g_10, g_11, g_12, g_13, g_14, g_15, g_16, g_17, g_18, g_19, g_20,
-				g_21, g_22, g_23, g_24, g_25, g_26, g_27, g_28, g_29, g_30, g_31, g_32, g_33, g_34])
+Gesture.create([g_1, g_2, g_3, g_4, g_5, g_6, g_7, g_8, g_9, g_10, g_11, g_12, g_13, g_14, g_15, g_16, g_17, g_18, g_19, g_38, g_20,
+				g_21, g_22, g_23, g_24, g_25, g_26, g_37, g_29, g_30, g_31, g_32, g_33, g_34, g_27, g_28, g_29, g_30, ])

@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
   def exp_up(exp)
   	self.experience += exp
 
-  	if self.experience >= 9
+  	if self.experience >= 3
   		self.experience = 0
   		self.level = self.level + 1
   	end 

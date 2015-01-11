@@ -10,7 +10,7 @@ class Item < ActiveRecord::Base
 
   def correct?(answer)
   	self.translations.each do |translation|
-  		t_temp = translation.gestures.pluck(:id) * ','
+      t_temp = translation.gestures.pluck(:id) * ','
   		return true if t_temp.eql? answer
   	end
   	return false
