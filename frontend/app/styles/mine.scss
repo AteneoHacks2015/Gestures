@@ -27,33 +27,69 @@ a:hover{
   background-color: #F3F3F3;
 }
 
+#tagline{
+  margin-top: -15%;
+  margin-left: 28.5%
+}
+
 ul{
   text-decoration: none;
   list-style: none;
   text-align: left;
+}
+.container, .container-full{
+  width: 101% !important;
+  height: 100% !important;
 }
 
 .nav-thing{
   text-align: center;
 }
 
-.row{
-  margin-left: -5%;
-  margin-right: -5%;
+.addb{
+  margin-left: 2%;
+}
+
+.homepic{
+  padding-top: 30px;
+  display: inline;
+  float: left;
+  width: 30%;
+  height: 60%;
+  margin-right: 10%;
+}
+
+.gapforhome{
   padding-top: 10%;
   padding-bottom: 10%;
-  min-width: 101%;
-  height: 100%;
+}
+
+.gaptop{
+  padding-bottom: 20%;
+  padding-top: -4%;
+}
+
+.zero{
+  padding-left: 4%;
+  padding-right: 4%;
+  margin-right: -2%;
+  background-color: rgba(65, 131, 215,1);
 }
 
 .one{
-  background-color: rgba(65, 131, 215,1);
-}
-.two{
+  padding-left: 4%;
+  padding-right: 4%;
   background-color: rgba(65, 131, 215,.8);
 }
+.two{
+  padding-left: 4%;
+  padding-right: 4%;
+  background-color: rgba(65, 131, 215,.4);
+}
 .three{
-  background-color: rgba(65, 131, 215,.5);
+  padding-left: 4%;
+  padding-right: 4%;
+  background-color: rgba(65, 131, 215,.0);
 }
 
 p{
@@ -69,19 +105,12 @@ h2{
   margin-bottom: 20px;
 }
 
-
-img{
-  padding-top: 30px;
-  display: inline;
-  float:left; 
-  width:30%;
-  height: 60%;
-  margin-right: 10%;
+.addb{
+  margin-left: 2%;
 }
 
-
 .homepage-pic{
-  margin-top: -10%;
+  margin-top: 8%;
   width: 35%;
   margin-right: -2%;
 }
@@ -131,7 +160,7 @@ input{
   color: #34495e;
   font-size: 1.5em;
   padding: 1%;
-  width: 50%;
+  width: 100%;
   height: auto;
 }
 
@@ -139,13 +168,24 @@ input:hover{
   background-color: white;
 }
 
+
 .form-control{
     background-color: #ecf0f1;
     color: #34495e;
     font-size: 1.5em;
     padding: 1%;
-    width: 50%;
+    width: 100%;
     height: auto;
+}
+
+#add{
+  text-align: center;
+  padding-right: 25%;
+  padding-left: 25%;
+}
+
+.center-page-header{
+  text-align: center;
 }
 
 .form-control:hover{
@@ -159,10 +199,43 @@ input:hover{
   font-weight: bold;
 }
 
+#difficulty{
+  width:25%;
+  text-align: center;
+  margin-left: 37.5%;
+  margin-right: 37.5%;
+}
+
 .navbar{
   background-color: #092D38;
 }
 
 .control-label{
   color: #092D38;
+}
+
+h1, h2, h3, p{
+  color: #092D38;
+}
+
+.sidebar{
+  background-color: #092D38;
+}
+
+.progress-decor{
+  color: #ecf0f1;
+  text-align: center;
+}
+
+#underneath-progress-bar{
+  margin-top: 0.7%;
+}
+
+.dash{
+  text-align: center;
+  background-color: white;
+}
+
+.dash .btn{
+    font-size: 16px;
 }
