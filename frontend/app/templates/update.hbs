@@ -8,7 +8,7 @@
 	<h3>Phrase</h3>
   <select class="form-control" id="phrase">
       {{#each item in model}}
-        <option data-id="">{{item.item_id}}</option></p>
+        <option {{bind-attr value=item.item_id}}>{{item.phrase}}</option></p>
       {{/each}}
   </select>
   
@@ -20,8 +20,8 @@
   </select>
 	
   <div id="add-signs">
-		<h3>Signs</h3>
-		<button class="btn btn-primary" data-toggle="modal" data-target="#signs">Add Sign</button>
+		<h3>Gesture</h3>
+		<button class="btn btn-primary" data-toggle="modal" data-target="#signs">Add Gesture</button>
 		<br><br>
 	</div>
 
@@ -39,7 +39,7 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-        <h4 class="modal-title">Add hand signs.</h4>
+        <h4 class="modal-title">Add gestures.</h4>
       </div>
       <div class="modal-body">
       <div class="row addb">

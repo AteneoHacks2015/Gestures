@@ -20,11 +20,17 @@ export default Ember.Controller.extend({
 				function(data){
 					console.log(data);
 					if(data.message == "correct"){
-						$('#success').modal('show');
-						console.log(data.user.level);
-						if(data.user.level == 2){
+						if(data.user.level >= 2){
 							$('#level-up').modal('show');
-						};
+							$('#level').addClass("active");
+
+							setTimeout(function() {
+								$("#level").removeClass("active");
+							}, 5000);
+						}
+						else{
+							$('#success').modal('show');							
+						}
 					}
 					else{
 						$('#fail').modal('show');

@@ -14,7 +14,6 @@ export default Ember.Route.extend({
           difficulty: sample.difficulty,
           item_id: sample.id
         });
-        console.log(item.item_id);
       });
 
       return self.store.all('items');

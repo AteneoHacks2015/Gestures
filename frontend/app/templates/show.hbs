@@ -1,13 +1,27 @@
-<div class="container">
-	<h1>My Translations</h1>
-	<br><br>
+<div id="my-items" class="container"
+	style="text-align: center">
+	<h1 style="text-align: center; font-size: 24px; color: rgba(0,0,0,0.5);">My Translations</h1>
+	<hr/>
+
+<style type="text/css">
+	.gesture:not(:last-child) {
+		border-radius: 50%;
+		box-shadow: 5px 0px 0px 0px #0099CC;
+	}
+</style>
 
   {{#each item in model}}
-	<h3>{{item.phrase}}</h3>
-	<h3><small>Difficulty: Easy</small></h3><br>
+	<h3 style="width: 100%; background: rgba(0,0,0,0.05); text-align: center; padding: 25px 0px; font-size: 50px;">{{item.phrase}}</h3>
+	<span style="width: 100%; background: rgba(255,255,0,0.2); text-align: center; padding: 5px 0px; color: #000; display: block">Difficulty: Easy</span><br>
 	<div class="row">
-	{{#each gesture in item.src}}
-		<img src="{{ gesture }}" alt="" height="7%" width="7%">
+	{{#each translation in item.src}}
+		<div>
+		<span style="background: rgba(0,0,0,0.25); border-radius: 5px; padding: 5px 10px">1</span>
+		{{#each gesture in translation}}
+		<img style="position: relative; margin: 0px 5px" class="gesture" src="{{ gesture }}" alt="" height="7%" width="7%">		
+		{{/each}}
+		</div>
+		<hr>
 	{{/each}}
 	</div>
 	<br><br>

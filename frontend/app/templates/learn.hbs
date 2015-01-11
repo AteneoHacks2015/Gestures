@@ -6,14 +6,20 @@
       </div>
 
       <div id="add-signs" class="row" style="text-align:center;">
-        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#signs">Add Signs</button>
+        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#signs">Add Gestures</button>
         <br><br>
       </div>
 
       <div class="row">
-          <h1 style="text-align:center;">Answer</h1>
-        <div class="col-md-12" id="gesture-set" style="text-align:center;">
+          <h1 style="text-align:center; font-size: 20px; color: rgba(0,0,0,0.35); border-bottom: 1px solid rgba(0,0,0,0.1); padding: 10px 0px">ANSWER</h1>
+        <div class="col-md-12" style="text-align:center;">
+          <span id="gesture-set" style="display: inline-block; padding: 10px 0px; background: rgba(0,0,0,0.15); border-radius: 10px; min-width: 50px">
+          </span>
         </div>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
           <p id="submit-answer"><a class="btn btn-primary btn-lg" role="button" {{action "submit" model.item_id}}>Submit Answer</a></p>
       </div>
     </div>
@@ -134,7 +140,7 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-        <h4 class="modal-title">You levelled up! Congratulations!</h4>
+        <h4 class="modal-title" style="font-size: 30px;">You <b>levelled up!</b> Congratulations!</h4>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" {{action "next"}}>Thanks!</button>

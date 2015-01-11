@@ -11,6 +11,7 @@ export default Ember.Route.extend({
       data.forEach(function(sample){
         var img = [];
         sample.translations.forEach(function(trans){
+          var translations = [];
           trans.gestures.forEach(function(gesture) {
             if(gesture.name.length == 1){
               var src = '/assets/gestures/sign-letters-circles/'+gesture.name+'.png';
@@ -19,8 +20,9 @@ export default Ember.Route.extend({
               var src = '/assets/gestures/words/'+gesture.name+'.png';
             }
 
-            img.push(src);
+            translations.push(src);
           });
+          img.push(translations);
         });
 
       	if(sample.difficulty === 1){

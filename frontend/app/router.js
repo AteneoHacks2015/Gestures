@@ -21,7 +21,7 @@ Router.map(function() {
   });
 
   this.route("show", {
-    path: "user/item/show"
+    path: "/"
   });
 
   this.resource("user", function() {

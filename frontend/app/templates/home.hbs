@@ -11,29 +11,45 @@
 	 <div class="container-full">
       <div class="row one gapforhome"><a name="learn"></a>
         <div class="col-lg-12">
-          <h2>
+          <h2 class="home-title">
           <img src="/assets/books.png" class="homepic">Learn
           </h2>
-        <p>As an educator, it is important that one imparts knowledge to one's students. Moreover, the number one way that we use in communicating is oral communication. However there cases on which students have students have disabilities when it comes to oras communication. Thus, the creation of Gestures.</p>
-        <p>Gestures is a web application that helps educators learn the language that no one hears. It helps teachers understand the words of the unspoken and opens the possibility for understanding without the use of speech.</p>
+        <p class="home-p">As an educator, it is important that one imparts knowledge to one's students. Moreover, the number one way that we use in communicating is oral communication. However there cases on which students have students have disabilities when it comes to oras communication. Thus, the creation of Gestures.</p>
+        <p class="home-p">Gestures is a web application that helps educators learn the language that no one hears. It helps teachers understand the words of the unspoken and opens the possibility for understanding without the use of speech.</p>
         </div>
       </div>
 
       <div class="row two gapforhome"><a name="achieve"></a>
         <div class="col-lg-12">
-          <h2>
+          <h2 class="home-title">
           <img src="/assets/star.png" class="homepic">Achieve
           </h2>
-        <p>In a fun and creative manner, Gestures is an avenue for one to learn a skill that might be hard for most in the easiest way possible by creating a set-up that is interactive Through these interactive environments, an educator can extend his/her skills by allowing him/her to track his/her achievements. Moreover, the application simulates different tracks having three levels of difficulty.</p>
+        <p class="home-p">In a fun and creative manner, Gestures is an avenue for one to learn a skill that might be hard for most in the easiest way possible by creating a set-up that is interactive Through these interactive environments, an educator can extend his/her skills by allowing him/her to track his/her achievements. Moreover, the application simulates different tracks having three levels of difficulty.</p>
         <p>And to ensure that learning is continious, a user can continue his/her current track as his/her progress is saved. </p>
       </div>
     </div>
 
       <div class="row three gapforhome"><a name="collaborate"></a>
        <div class="col-lg-12">
-       <h2>
+       <h2 class="home-title">
           <img src="/assets/collab.png" class="homepic">Collaborate
         </h2>
-        <p>And as the application promotes learning through teaching, the app has a module that allows a certain user, given that his/her achievement level reach a certain stage, can add new translations to the database. Upon submitting a new translation, it is then taught to the users in lower levels through the learning module.</p>
-        <p>Furthermore, it is also an avenue to connect with other people who use the unsaid language and make the application an avenue for collaborative learning. After all, the best way to measure if a person learned something is by teaching it.</p>
+        <p class="home-p">And as the application promotes learning through teaching, the app has a module that allows a certain user, given that his/her achievement level reach a certain stage, can add new translations to the database. Upon submitting a new translation, it is then taught to the users in lower levels through the learning module.</p>
+        <p class="home-p">Furthermore, it is also an avenue to connect with other people who use the unsaid language and make the application an avenue for collaborative learning. After all, the best way to measure if a person learned something is by teaching it.</p>
       </div></div>
+<div id="home-smoothscroll">
+  <span class="span1">Learn</span>
+  <span class="span2">Achieve</span>
+  <span class="span3">Collaborate</span>
+</div>
+
+<script type="text/javascript">
+alert("///");
+$(document).ready(function() {
+  $("#home-smoothscroll .span1").click(function() {
+    $(body).animate({
+      scrollTop: 0
+    }, 500);
+  });
+});
+</script>
