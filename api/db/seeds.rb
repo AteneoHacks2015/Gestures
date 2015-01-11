@@ -2,14 +2,17 @@ player_params = {login: 'mpandres',
                  password: 'password',
                  role: 'player',
                  name: 'Mireya Andres',
-                 school: 'UP Diliman'}
+                 school: 'UP Diliman',
+                 experience: 2,
+                 level: 1}
 
 translator_params = {login: 'nmcalabroso',
                      password: 'password',
                      role: 'translator',
                      name: 'Neil Calabroso',
-                     school: 'Ateneo De Manila University'
-                     }
+                     school: 'Ateneo De Manila University',
+                     experience: 2,
+                     level: 1}
 
 g_1 = {name: "a"}
 g_2 = {name: "b"}
@@ -39,21 +42,21 @@ g_25 = {name: "z"}
 g_26 = {name: "afternoon"}
 g_27 = {name: "bathroom"}
 g_28 = {name: "beautiful"}
-g_29 = {name: "good"}
-g_30 = {name: "hello"}
-g_31 = {name: "monkey"}
-g_32 = {name: "nice"}
-g_33 = {name: "orange"}
-g_34 = {name: "white"}
-g_35 = {name: "yes"}
-g_36 = {name: "you"}
+g_29 = {name: "Good"}
+g_30 = {name: "Hello"}
+g_31 = {name: "Monkey"}
+g_32 = {name: "Nice"}
+g_33 = {name: "Orange"}
+g_34 = {name: "White"}
+g_35 = {name: "Yes"}
+g_36 = {name: "You"}
 
-item_1 = {phrase: "Spell out 'Hello'", difficulty: 1}
-item_2 = {phrase: "Spell out 'Excellence'", difficulty: 1}
-item_3 = {phrase: "Spell out 'School'", difficulty: 1}
-item_4 = {phrase: "Demonstrate the sign for the word 'Orange'", difficulty: 2}
-item_5 = {phrase: "Demonstrate the sign for the word 'White'", difficulty: 2}
-item_6 = {phrase: "Demonstrate the sign for the word 'Yes'", difficulty: 2}
+item_1 = {phrase: "Hello", difficulty: 1}
+item_2 = {phrase: "Excellence", difficulty: 1}
+item_3 = {phrase: "School", difficulty: 1}
+item_4 = {phrase: "Orange", difficulty: 2}
+item_5 = {phrase: "White", difficulty: 2}
+item_6 = {phrase: "Yes", difficulty: 2}
 
 player = User.create(player_params)
 translator = User.create(translator_params)

@@ -3,7 +3,9 @@ class Item < ActiveRecord::Base
   has_many :translations
 
   def self.random_items(difficulty, count)
-    Item.where('difficulty = ?', difficulty).limit(count).order('RANDOM()')
+    @items = Item.where(difficulty: difficulty)
+    offset = rand(@items.size)
+    record = @items.offset(offset).first
   end
 
   def correct?(answer)

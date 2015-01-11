@@ -14,7 +14,7 @@ export default Ember.Route.extend({
         item_id: data.id
     	});
 
-    	return item;
+    	return item;      
     });
 
 
