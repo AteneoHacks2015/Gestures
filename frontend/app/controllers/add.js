@@ -43,6 +43,7 @@ export default Ember.Controller.extend({
 			$('#success').modal('hide');
 			$('#add-signs').empty('');
 			this.set('phrase', '');
+			this.set('sign_array', []);
 		}
 	}
 });

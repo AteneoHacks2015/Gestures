@@ -20,9 +20,7 @@ Router.map(function() {
     path: "user/item/update"
   });
 
-  this.route("show", {
-    path: "/"
-  });
+  this.route("show");
 
   this.resource("user", function() {
     this.route("translations");

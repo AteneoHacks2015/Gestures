@@ -20,7 +20,7 @@ export default Ember.Controller.extend({
               });
 
               $('#login').modal('hide');
-              self.transitionToRoute("/user");
+              self.transitionToRoute("/show");
           });
       }
     },
@@ -53,7 +53,7 @@ export default Ember.Controller.extend({
             function(data){
               self.set('isAuthenticated', true);
               $('#signUp').modal('hide');
-              self.transitionToRoute("/user");
+              self.transitionToRoute("/show");
           });
       }
     }

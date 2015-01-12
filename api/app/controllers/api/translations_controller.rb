@@ -11,7 +11,7 @@ class Api::TranslationsController < Api::ApplicationController
 	def create
 		trans_params = translation_params
 		@item = Item.find(params[:item_id])
-		
+				
 		if @item.translations.create({name: trans_params[:name]})
 			@gestures = Gesture.find(trans_params[:gestures])
 			@translation = @item.translations.last
